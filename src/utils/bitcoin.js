@@ -6,8 +6,7 @@ export const createAddress = () => {
   const keyPair = ECPair.makeRandom();
   const privateKey = keyPair.privateKey.toString('hex');
   const publicKey = keyPair.publicKey;
-  console.log('publicKey:', publicKey.toString('hex'), publicKey.length);
-  let address = getAddressFromPublicKey(publicKey);
+  const address = getAddressFromPublicKey(publicKey);
   return { privateKey, address };
 };
 
